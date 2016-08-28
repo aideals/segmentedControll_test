@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  imageViewController.h
 //  segmentedControll_test
 //
 //  Created by 鹏 刘 on 16/8/19.
@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface imageViewController : UIViewController
 
 @end
-

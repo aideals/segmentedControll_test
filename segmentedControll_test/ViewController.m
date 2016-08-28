@@ -9,19 +9,42 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic,strong) UISegmentedControl *sc;
+@property (nonatomic,copy) NSArray *segmentedControlData;
+@property (nonatomic,strong) imageViewController *ic;
+@property (nonatomic,strong) UIWebView *webView;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    self.segmentedControlData = [[NSArray alloc] initWithObjects:@"Image View",@"Web View", nil];
+    self.sc = [[UISegmentedControl alloc] initWithItems:self.segmentedControlData];
+    self.sc.frame = CGRectMake(0, 25, self.view.bounds.size.width, 45);
+    self.sc.selectedSegmentIndex = 0;
+    [self.sc addTarget:self action:@selector(changeView:) forControlEvents:UIControlEventTouchDown];
+    
+    NSURLRequest *url = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 26, self.view.bounds.size.width, 500)];
+    [self.webView loadRequest:url];
+    
+    
+    [self.view addSubview:self.webView];
+    [self.view addSubview:self.sc];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeView:(UISegmentedControl *)seg
+{
+    NSInteger segIndex = seg.selectedSegmentIndex;
+    
+ 
+    
 }
+
+
+
 
 @end

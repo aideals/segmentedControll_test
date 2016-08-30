@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D246FBB1D69422A00957114 /* scrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D246FBA1D69422A00957114 /* scrollViewController.m */; };
 		1D266FEE1D671F0400D72C0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D266FED1D671F0400D72C0C /* main.m */; };
 		1D266FF11D671F0400D72C0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D266FF01D671F0400D72C0C /* AppDelegate.m */; };
 		1D266FF41D671F0400D72C0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D266FF31D671F0400D72C0C /* ViewController.m */; };
@@ -15,7 +14,7 @@
 		1D266FFC1D671F0400D72C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D266FFA1D671F0400D72C0C /* LaunchScreen.storyboard */; };
 		1D2670071D671F0400D72C0C /* segmentedControll_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2670061D671F0400D72C0C /* segmentedControll_testTests.m */; };
 		1D2670121D671F0400D72C0C /* segmentedControll_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2670111D671F0400D72C0C /* segmentedControll_testUITests.m */; };
-		1D2670211D673FCF00D72C0C /* imageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2670201D673FCF00D72C0C /* imageViewController.m */; };
+		1D8A221A1D746E9800AF7DE1 /* webView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8A22191D746E9800AF7DE1 /* webView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D246FB91D69422A00957114 /* scrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scrollViewController.h; sourceTree = "<group>"; };
-		1D246FBA1D69422A00957114 /* scrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scrollViewController.m; sourceTree = "<group>"; };
 		1D266FE91D671F0400D72C0C /* segmentedControll_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = segmentedControll_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D266FED1D671F0400D72C0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D266FEF1D671F0400D72C0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +50,8 @@
 		1D26700D1D671F0400D72C0C /* segmentedControll_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = segmentedControll_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2670111D671F0400D72C0C /* segmentedControll_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = segmentedControll_testUITests.m; sourceTree = "<group>"; };
 		1D2670131D671F0400D72C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D26701F1D673FCF00D72C0C /* imageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageViewController.h; sourceTree = "<group>"; };
-		1D2670201D673FCF00D72C0C /* imageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageViewController.m; sourceTree = "<group>"; };
+		1D8A22181D746E9800AF7DE1 /* webView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webView.h; sourceTree = "<group>"; };
+		1D8A22191D746E9800AF7DE1 /* webView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +106,8 @@
 				1D266FF01D671F0400D72C0C /* AppDelegate.m */,
 				1D266FF21D671F0400D72C0C /* ViewController.h */,
 				1D266FF31D671F0400D72C0C /* ViewController.m */,
-				1D26701F1D673FCF00D72C0C /* imageViewController.h */,
-				1D2670201D673FCF00D72C0C /* imageViewController.m */,
-				1D246FB91D69422A00957114 /* scrollViewController.h */,
-				1D246FBA1D69422A00957114 /* scrollViewController.m */,
+				1D8A22181D746E9800AF7DE1 /* webView.h */,
+				1D8A22191D746E9800AF7DE1 /* webView.m */,
 				1D266FF81D671F0400D72C0C /* Assets.xcassets */,
 				1D266FFA1D671F0400D72C0C /* LaunchScreen.storyboard */,
 				1D266FFD1D671F0400D72C0C /* Info.plist */,
@@ -280,10 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D266FF41D671F0400D72C0C /* ViewController.m in Sources */,
+				1D8A221A1D746E9800AF7DE1 /* webView.m in Sources */,
 				1D266FF11D671F0400D72C0C /* AppDelegate.m in Sources */,
-				1D2670211D673FCF00D72C0C /* imageViewController.m in Sources */,
 				1D266FEE1D671F0400D72C0C /* main.m in Sources */,
-				1D246FBB1D69422A00957114 /* scrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

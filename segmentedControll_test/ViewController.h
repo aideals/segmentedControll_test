@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "imageViewController.h"
+#import "webView.h"
 
 
 @interface ViewController : UIViewController

@@ -10,7 +10,8 @@
 
 @interface ViewController ()
 @property (nonatomic,strong)UISegmentedControl *sc;
-
+@property (nonatomic,strong)UIWebView *wv;
+@property (nonatomic,strong)UIImageView *iv;
 @end
 
 @implementation ViewController
@@ -26,16 +27,46 @@
     self.sc.selectedSegmentIndex = 0;
     [self.sc addTarget:self action:@selector(changeView:) forControlEvents:UIControlEventValueChanged];
     
+    [self webView];
+    [self imageView];
     [self.view addSubview:self.sc];
 }
+
+- (UIView *)webView
+{
+    self.wv = [[UIWebView alloc] initWithFrame:CGRectMake(0, 73, self.view.bounds.size.width, 600)];
+    NSURLRequest *url = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.163.com"]];
+    [self.wv loadRequest:url];
+    
+    return _wv;
+}
+
+- (UIView *)imageView
+{
+    self.iv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, 370)];
+    self.iv.backgroundColor = [UIColor blueColor];
+    
+    return _iv;
+}
+
 
 - (IBAction)changeView:(UISegmentedControl *)seg
 {
     NSInteger index = seg.selectedSegmentIndex;
     
-    if (index == 0) {
-        webView *wb = [[webView alloc] init];
-        [self.view addSubview:wb];
+    switch (index) {
+        case 0:
+            [self.iv removeFromSuperview];
+            [self.view addSubview:self.wv];
+            break;
+        case 1:
+            [self.wv removeFromSuperview];
+            [self.view addSubview:self.iv];
+            break;
+        
+        
+        default:
+            break;
     }
 }
 

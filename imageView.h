@@ -1,15 +1,13 @@
 //
-//  webView.h
+//  imageView.h
 //  segmentedControll_test
 //
-//  Created by 鹏 刘 on 16/8/29.
+//  Created by 鹏 刘 on 16/9/1.
 //  Copyright © 2016年 鹏 刘. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface webView : UIView
-
-- (instancetype)initWithFrame:(CGRect)frame;
+@interface imageView : UIView
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "imageView.h"
 
 
 @interface ViewController : UIViewController

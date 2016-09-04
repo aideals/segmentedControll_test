@@ -27,8 +27,10 @@
     self.sc.selectedSegmentIndex = 0;
     [self.sc addTarget:self action:@selector(changeView:) forControlEvents:UIControlEventValueChanged];
     
+    imageView *image = [[imageView alloc] init];
+    self.iv = image;
+    
     [self webView];
-    [self imageView];
     [self.view addSubview:self.sc];
 }
 
@@ -37,18 +39,9 @@
     self.wv = [[UIWebView alloc] initWithFrame:CGRectMake(0, 73, self.view.bounds.size.width, 600)];
     NSURLRequest *url = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://www.163.com"]];
     [self.wv loadRequest:url];
-    
+    [self.view addSubview:self.wv];
     return _wv;
 }
-
-- (UIView *)imageView
-{
-    self.iv = [[UIImageView alloc]initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, 370)];
-    self.iv.backgroundColor = [UIColor blueColor];
-    
-    return _iv;
-}
-
 
 - (IBAction)changeView:(UISegmentedControl *)seg
 {
@@ -57,7 +50,7 @@
     switch (index) {
         case 0:
             [self.iv removeFromSuperview];
-            [self.view addSubview:self.wv];
+            [self webView];
             break;
         case 1:
             [self.wv removeFromSuperview];

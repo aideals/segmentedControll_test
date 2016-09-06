@@ -9,9 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (nonatomic,strong)UISegmentedControl *sc;
-@property (nonatomic,strong)UIWebView *wv;
-@property (nonatomic,strong)UIImageView *iv;
+@property (nonatomic,strong) UISegmentedControl *sc;
+@property (nonatomic,strong) UIWebView *wv;
+@property (nonatomic,strong) UIImageView *iv;
+@property (nonatomic,strong) NSMutableArray *imageArray;
 @end
 
 @implementation ViewController
@@ -27,8 +28,14 @@
     self.sc.selectedSegmentIndex = 0;
     [self.sc addTarget:self action:@selector(changeView:) forControlEvents:UIControlEventValueChanged];
     
-    imageView *image = [[imageView alloc] init];
-    self.iv = image;
+    self.imageArray = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"dog 1.png"],[UIImage imageNamed:@"dog 2.png"],[UIImage imageNamed:@"dog 3.png"],[UIImage imageNamed:@"dog 4.png"],[UIImage imageNamed:@"dog 5.png"], nil];
+    
+    self.iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, 500)];
+   
+    for (int i = 0; i < self.imageArray.count; i ++) {
+        self.iv.image = [self.imageArray objectAtIndex:i];
+    }
+    
     
     [self webView];
     [self.view addSubview:self.sc];
